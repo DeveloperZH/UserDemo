@@ -7,7 +7,7 @@ import com.zh.commonuilibrary.controls.DrawableBuilder;
 import com.zh.commonuilibrary.controls.XTextView;
 
 /**
- * @describe:
+ * @describe: DemoActivity
  * @author: Z H
  * @date: 2020/2/26 10:25
  * @pkgName: com.zh.userdemo
@@ -58,7 +58,6 @@ public class XTextViewActivity extends BaseActivity {
                 .setCornerRadius(60)
                 .setLine(5, Color.YELLOW, 70)
                 .setDotted(5, 1);
-
     }
 
     /**
@@ -73,7 +72,6 @@ public class XTextViewActivity extends BaseActivity {
                 .build();
         xtv_text_2.setBackground(drawable);
     }
-
 
     /**
      * 设置XTextView的按压选中效果
