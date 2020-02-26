@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zh.commonuilibrary.controls.XTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="xml文件中设置Textview属性"
+        app:bgColor="@color/colorPrimary"
+        app:bgColorAlpha="5"
+        app:cornerRadius="20"
+        app:lineColorAlpha="50"
+        app:lineWidth="10"
+        app:shape="rectangle" />
+
+    <com.zh.commonuilibrary.controls.XTextView
+        android:id="@+id/xtv_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="在代码中设置TextView属性" />
+
+    <com.zh.commonuilibrary.controls.XTextView
+        android:id="@+id/xtv_text_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="在代码中设置TextView属性" />
+
+    <com.zh.commonuilibrary.controls.XTextView
+        android:id="@+id/xtv_text_3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="设置TextView的按压等效果" />
+
+    <com.zh.commonuilibrary.controls.XTextView
+        android:id="@+id/xtv_text_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="设置TextView的选中等效果 \n 点我 再点我" />
+
+</LinearLayout>

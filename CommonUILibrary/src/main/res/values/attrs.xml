@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XTextView">
+        <attr name="shape" format="enum">
+           <enum name="rectangle" value="0"/>
+           <enum name="oval" value="1"/>
+           <enum name="line" value="2"/>
+           <enum name="ring" value="3"/>
+        </attr>
+        <attr name="lineWidth" format="integer|reference"/>
+        <attr name="lineColor" format="color|reference"/>
+        <attr name="lineColorAlpha" format="integer"/>
+        <attr name="dashWidth" format="float|reference"/>
+        <attr name="dashGap" format="float|reference"/>
+        <attr name="cornerRadius" format="float|reference"/>
+        <attr name="bgColor" format="color|reference"/>
+        <attr name="bgColorAlpha" format="integer"/>
+    </declare-styleable>
+</resources>
