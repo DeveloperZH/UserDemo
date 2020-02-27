@@ -1,9 +1,6 @@
 package com.zh.commonuilibrary.controls;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.GradientDrawable;
-import android.text.TextUtils;
 
 import com.zh.commonuilibrary.util.ColorUtil;
 
@@ -11,6 +8,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
 import androidx.annotation.IntDef;
 
 
@@ -21,7 +19,6 @@ import androidx.annotation.IntDef;
  * @pkgName: shapedemo.zh.com.shapedemo.my
  */
 public class DrawableBuilder {
-
     private int mShape;
     private float[] mCornerRadius;
     private int mLineWidth;
@@ -29,6 +26,7 @@ public class DrawableBuilder {
     private float mDashWidth;
     private float mDashGap;
     private int mbgColor = Color.TRANSPARENT;
+    private @ColorRes int textColor;
 
     public static final int RECTANGLE = 0;
     public static final int OVAL = 1;
@@ -44,12 +42,13 @@ public class DrawableBuilder {
 
     }
 
-    public Drawable build() {
-        GradientDrawable gradientDrawable = new GradientDrawable();
+    public XDrawable build() {
+        XDrawable gradientDrawable = new XDrawable();
         gradientDrawable.setShape(mShape);
         gradientDrawable.setStroke(mLineWidth, mLineColor, mDashWidth, mDashGap);
         gradientDrawable.setCornerRadii(mCornerRadius);
         gradientDrawable.setColor(mbgColor);
+        gradientDrawable.setTextColor(textColor);
         return gradientDrawable;
     }
 
@@ -145,4 +144,13 @@ public class DrawableBuilder {
     }
 
 
+    /**
+     * 这个是配合 {@link XTextView#setDrawableState(XDrawable, XDrawable, int)}
+     * 这个方法来设置不同的state的文字颜色
+     * 文字不需要变色 可以不设置
+     */
+    public DrawableBuilder textColor(@ColorRes int textColor) {
+        this.textColor = textColor;
+        return this;
+    }
 }

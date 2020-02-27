@@ -2,15 +2,19 @@ package com.zh.commonuilibrary.controls;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.zh.commonuilibrary.R;
 import com.zh.commonuilibrary.util.ColorUtil;
+
+import java.io.PrintWriter;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
@@ -188,17 +192,20 @@ public class XTextView extends TextView {
      *                       {@link android.R.attr#state_selected},
      *                       {@link android.R.attr#state_pressed}
      */
-    public XTextView setDrawableState(Drawable commonDrawable, Drawable selectDrawable, int... type) {
-        if (type.length <= 0) {
-            throw new NullPointerException("type 必须传入一个类型 否则请用其他方法");
-        }
+    public XTextView setDrawableState(XDrawable commonDrawable, XDrawable selectDrawable, int type) {
         this.setClickable(true);
         StateListDrawable listDrawable = new StateListDrawable();
-        if (type.length > 0) {
-            for (int i = 0; i < type.length; i++) {
-                listDrawable.addState(new int[]{type[i]}, commonDrawable);
-                listDrawable.addState(new int[]{-type[i]}, selectDrawable);
-            }
+        listDrawable.addState(new int[]{type}, commonDrawable);
+        listDrawable.addState(new int[]{-type}, selectDrawable);
+        try {
+            int[] colors = new int[]{getResources().getColor(commonDrawable.getTextColor()), getResources().getColor(selectDrawable.getTextColor())};
+            int[][] colorStates = new int[2][];
+            colorStates[0] = new int[]{type};
+            colorStates[1] = new int[]{};
+            ColorStateList colorList = new ColorStateList(colorStates, colors);
+            this.setTextColor(colorList);
+        } catch (Exception e) {
+            Log.e("Exception", "设置按压文字变色 必须两个XDrawable 都要设置textColor");
         }
         this.setBackground(listDrawable);
         return this;

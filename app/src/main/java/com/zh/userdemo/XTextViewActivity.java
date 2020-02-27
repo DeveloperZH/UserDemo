@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 
 import com.zh.commonuilibrary.controls.DrawableBuilder;
+import com.zh.commonuilibrary.controls.XDrawable;
 import com.zh.commonuilibrary.controls.XTextView;
 
 /**
@@ -77,12 +78,16 @@ public class XTextViewActivity extends BaseActivity {
      * 设置XTextView的按压选中效果
      */
     private void setXTvState(XTextView xTextView, int state) {
-        Drawable drawableBuilder = new DrawableBuilder().backGroundColor(Color.YELLOW)
+        XDrawable drawableBuilder = new DrawableBuilder().backGroundColor(Color.YELLOW)
                 .shape(DrawableBuilder.RECTANGLE)
-                .line(10, Color.LTGRAY).build();
-        Drawable drawableBuilder2 = new DrawableBuilder().backGroundColor(Color.GREEN)
+                .line(10, Color.LTGRAY)
+                .textColor(R.color.colorAccent)
+                .build();
+        XDrawable drawableBuilder2 = new DrawableBuilder().backGroundColor(Color.GREEN)
                 .shape(DrawableBuilder.OVAL)
-                .line(10, Color.RED).build();
+                .line(10, Color.YELLOW)
+                .textColor(R.color.color_1e68ff)
+                .build();
         xTextView.setDrawableState(drawableBuilder, drawableBuilder2, state);
     }
 }
