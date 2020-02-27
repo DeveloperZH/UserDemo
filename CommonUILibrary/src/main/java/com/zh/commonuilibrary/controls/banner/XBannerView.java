@@ -19,4 +19,8 @@ public class XBannerView extends RelativeLayout {
         super(context, attrs);
     }
 
+    public XBannerView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+
+    }
 }
