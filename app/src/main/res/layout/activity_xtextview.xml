@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.zh.commonuilibrary.controls.XTextView
+    <com.zh.commonuilibrary.controls.xtextview.XTextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
@@ -22,7 +22,7 @@
         app:lineWidth="10"
         app:shape="rectangle" />
 
-    <com.zh.commonuilibrary.controls.XTextView
+    <com.zh.commonuilibrary.controls.xtextview.XTextView
         android:id="@+id/xtv_text_1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -31,7 +31,7 @@
         android:gravity="center"
         android:text="在代码中设置TextView属性" />
 
-    <com.zh.commonuilibrary.controls.XTextView
+    <com.zh.commonuilibrary.controls.xtextview.XTextView
         android:id="@+id/xtv_text_2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -40,7 +40,7 @@
         android:gravity="center"
         android:text="在代码中设置TextView属性" />
 
-    <com.zh.commonuilibrary.controls.XTextView
+    <com.zh.commonuilibrary.controls.xtextview.XTextView
         android:id="@+id/xtv_text_3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -49,7 +49,7 @@
         android:gravity="center"
         android:text="设置TextView的按压等效果" />
 
-    <com.zh.commonuilibrary.controls.XTextView
+    <com.zh.commonuilibrary.controls.xtextview.XTextView
         android:id="@+id/xtv_text_4"
         android:layout_width="match_parent"
         android:layout_height="50dp"

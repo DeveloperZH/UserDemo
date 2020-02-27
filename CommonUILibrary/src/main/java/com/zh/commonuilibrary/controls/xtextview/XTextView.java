@@ -1,11 +1,10 @@
-package com.zh.commonuilibrary.controls;
+package com.zh.commonuilibrary.controls.xtextview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -13,8 +12,6 @@ import android.widget.TextView;
 
 import com.zh.commonuilibrary.R;
 import com.zh.commonuilibrary.util.ColorUtil;
-
-import java.io.PrintWriter;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
@@ -84,7 +81,7 @@ public class XTextView extends TextView {
      * 设置类型
      *
      * @param shape shape的类型
-     *              {@link com.zh.commonuilibrary.controls.DrawableBuilder.Shape}
+     *              {@link DrawableBuilder.Shape}
      */
     public XTextView setShape(@DrawableBuilder.Shape int shape) {
         this.shape = shape;

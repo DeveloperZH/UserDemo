@@ -1,4 +1,4 @@
-package com.zh.commonuilibrary.controls;
+package com.zh.commonuilibrary.controls.xtextview;
 
 import android.graphics.drawable.GradientDrawable;
 
