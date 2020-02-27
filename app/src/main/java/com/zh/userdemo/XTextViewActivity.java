@@ -19,8 +19,6 @@ public class XTextViewActivity extends BaseActivity {
     private XTextView xtv_text_2;
     private XTextView xtv_text_3;
     private XTextView xtv_text_4;
-
-
     private boolean isSelect = false;
 
     @Override
