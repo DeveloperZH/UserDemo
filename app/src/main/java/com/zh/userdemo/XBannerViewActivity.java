@@ -9,7 +9,7 @@ package com.zh.userdemo;
 public class XBannerViewActivity extends BaseActivity {
     @Override
     public int getLayoutResId() {
-        return 0;
+        return R.layout.activity_xbanner;
     }
 
     @Override
