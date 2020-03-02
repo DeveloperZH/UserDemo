@@ -12,7 +12,7 @@
         <attr name="lineColorAlpha" format="integer"/>
         <attr name="dashWidth" format="float|reference"/>
         <attr name="dashGap" format="float|reference"/>
-        <attr name="cornerRadius" format="float|reference"/>
+        <attr name="radius" format="float|reference"/>
         <attr name="bgColor" format="color|reference"/>
         <attr name="bgColorAlpha" format="integer"/>
     </declare-styleable>

@@ -65,7 +65,7 @@ public class XTextView extends TextView {
         lineColorAlpha = typedArray.getInt(R.styleable.XTextView_lineColorAlpha, lineColorAlpha);
         dashWidth = typedArray.getFloat(R.styleable.XTextView_dashWidth, 0);
         dashGap = typedArray.getFloat(R.styleable.XTextView_dashGap, 0);
-        cornerRadius = typedArray.getFloat(R.styleable.XTextView_cornerRadius, 0);
+        cornerRadius = typedArray.getFloat(R.styleable.XTextView_radius, 0);
         bgColor = typedArray.getColor(R.styleable.XTextView_bgColor, bgColor);
         bgColorAlpha = typedArray.getInt(R.styleable.XTextView_bgColorAlpha, bgColorAlpha);
         typedArray.recycle();

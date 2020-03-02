@@ -17,7 +17,7 @@
         android:text="xml文件中设置Textview属性"
         app:bgColor="@color/colorPrimary"
         app:bgColorAlpha="5"
-        app:cornerRadius="20"
+        app:radius="20"
         app:lineColorAlpha="50"
         app:lineWidth="10"
         app:shape="rectangle" />
