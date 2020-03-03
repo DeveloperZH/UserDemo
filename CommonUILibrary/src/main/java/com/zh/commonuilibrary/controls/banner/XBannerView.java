@@ -47,7 +47,6 @@ public class XBannerView<T> extends RelativeLayout {
         bannerSnapHelper.attachToRecyclerView(rvBanner);
     }
 
-
     /**
      * 设置边距
      *
