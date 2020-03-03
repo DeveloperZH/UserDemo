@@ -30,7 +30,6 @@ public class XBannerViewActivity extends BaseActivity {
     @Override
     public void initView() {
         xtv_banner = findViewById(R.id.xtv_banner);
-
         dataList.add("http://cos.clife.net/31423/f42c8a72b4def37b7602948d6a93e74a.jpg");
         dataList.add("http://cos.clife.net/31423/5aea376eba72aa91f543173f74ac5595.jpg");
         dataList.add("http://cos.clife.net/31423/7c78da3ca478d2fca285a66d42581a47.jpg");
@@ -49,7 +48,6 @@ public class XBannerViewActivity extends BaseActivity {
                         .error(R.mipmap.ic_launcher)
                         .placeholder(R.mipmap.ic_launcher_round)
                         .into(imageView);
-
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

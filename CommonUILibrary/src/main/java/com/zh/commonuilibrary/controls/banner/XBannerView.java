@@ -13,7 +13,6 @@ import java.util.List;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
@@ -28,7 +27,6 @@ public class XBannerView<T> extends RelativeLayout {
     private Context context;
     private RecyclerView rvBanner;
     private BannerAdapter mAdapter;
-    private XBannerCallback xBannerCallback;
 
     public XBannerView(Context context) {
         this(context, null);
@@ -45,7 +43,6 @@ public class XBannerView<T> extends RelativeLayout {
         addView(view);
         rvBanner = view.findViewById(R.id.rv_banner);
         rvBanner.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
-//        rvBanner.setLayoutManager(new HorizontalLayoutManager());
         BannerSnapHelper bannerSnapHelper = new BannerSnapHelper();
         bannerSnapHelper.attachToRecyclerView(rvBanner);
     }
@@ -66,7 +63,7 @@ public class XBannerView<T> extends RelativeLayout {
 
     /**
      * 设置SnapHelper
-     * */
+     */
     public void setSnapHelper(SnapHelper snapHelper) {
         if (snapHelper != null) {
             snapHelper.attachToRecyclerView(rvBanner);
@@ -77,9 +74,10 @@ public class XBannerView<T> extends RelativeLayout {
      * 设置数据
      */
     public void setData(@NonNull List<T> dateList, @NonNull @LayoutRes int itemLayoutResId, XBannerCallback xBannerCallback) {
-        this.xBannerCallback = xBannerCallback;
         mAdapter = new BannerAdapter(context, itemLayoutResId, dateList);
         mAdapter.setXBannerCallback(xBannerCallback);
         rvBanner.setAdapter(mAdapter);
     }
+
+
 }
