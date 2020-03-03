@@ -43,8 +43,6 @@ public class XBannerView<T> extends RelativeLayout {
         addView(view);
         rvBanner = view.findViewById(R.id.rv_banner);
         rvBanner.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
-        BannerSnapHelper bannerSnapHelper = new BannerSnapHelper();
-        bannerSnapHelper.attachToRecyclerView(rvBanner);
     }
 
     /**
@@ -55,13 +53,14 @@ public class XBannerView<T> extends RelativeLayout {
      */
     public void setMargin(int sideMargin, int pageMargin) {
         if (mAdapter == null) {
-            throw new NullPointerException("请先调用setData()方法");
+            throw new NullPointerException("请先调用setData()或者setAdapter()方法");
         }
         mAdapter.setMargin(sideMargin, pageMargin);
     }
 
     /**
      * 设置SnapHelper
+     * 默认是没有SnapHelper
      */
     public void setSnapHelper(SnapHelper snapHelper) {
         if (snapHelper != null) {
@@ -78,5 +77,14 @@ public class XBannerView<T> extends RelativeLayout {
         rvBanner.setAdapter(mAdapter);
     }
 
+
+    /**
+     * 用户自定义Adapter  可以实现一些自己的方法
+     * 必须继承BannerAdapter
+     */
+    public void setAdapter(BannerAdapter adapter) {
+        this.mAdapter = adapter;
+        rvBanner.setAdapter(adapter);
+    }
 
 }

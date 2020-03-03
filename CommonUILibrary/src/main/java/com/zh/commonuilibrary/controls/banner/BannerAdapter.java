@@ -25,6 +25,8 @@ public class BannerAdapter<T> extends BaseQuickAdapter<T, BaseViewHolder> {
     private int sideMargin;  //中间图片带屏幕两边的距离
     private int pageMargin;  //中间图片到两变图片的距离
 
+
+
     public BannerAdapter(Context context, int layoutResId, List<T> data) {
         super(layoutResId, data);
         this.context = context;
