@@ -10,7 +10,7 @@ import android.util.Log
 import android.widget.TextView
 import androidx.annotation.ColorInt
 import com.zh.commonuilibrary.R
-import com.zh.commonuilibrary.util.ColorUtil
+import com.zh.commonuilibrary.util.getColorByAlpha
 
 /**
  * @describe: XTextView
@@ -99,7 +99,7 @@ class XTextView : TextView {
     fun setLine(lineWidth: Int, lineColor: Int, lineColorAlpha: Int): XTextView {
         this.lineWidth = lineWidth
         this.lineColorAlpha = lineColorAlpha
-        this.lineColor = ColorUtil.getColorByAlpha(lineColor, lineColorAlpha)
+        this.lineColor = getColorByAlpha(lineColor, lineColorAlpha)
         mBuilder.line(lineWidth, lineColor)
         this.background = mBuilder.build()
         return this

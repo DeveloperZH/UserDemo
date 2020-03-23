@@ -4,7 +4,7 @@ import android.graphics.Color
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 import androidx.annotation.IntDef
-import com.zh.commonuilibrary.util.ColorUtil
+import com.zh.commonuilibrary.util.getColorByAlpha
 
 /**
  * @describe: ${todo}
@@ -63,7 +63,7 @@ class DrawableBuilder {
      */
     fun line(lineWidth: Int, lineColor: Int, lineColorAlpha: Int): DrawableBuilder {
         mLineWidth = lineWidth
-        mLineColor = ColorUtil.getColorByAlpha(lineColor, lineColorAlpha)
+        mLineColor = getColorByAlpha(lineColor, lineColorAlpha)
         return this
     }
 
@@ -120,7 +120,7 @@ class DrawableBuilder {
      * 0 完全透明   1 为完全不透明
      */
     fun backGroundColor(mbgColor: Int, alpha: Int): DrawableBuilder {
-        this.mbgColor = ColorUtil.getColorByAlpha(mbgColor, alpha)
+        this.mbgColor = getColorByAlpha(mbgColor, alpha)
         return this
     }
 

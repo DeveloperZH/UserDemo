@@ -1,7 +1,9 @@
 package com.zh.userdemo
 
-import android.widget.ImageView
-import com.zh.commonuilibrary.util.GlideUtil
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.zh.commonuilibrary.util.transform.GlideBlurTransformation
 
 /**
  * @describe: Glide 用法测试
@@ -16,7 +18,19 @@ class GlideDemoActivity : BaseActivity() {
     override fun layoutResId(): Int = R.layout.activity_glide
 
     override fun initData() {
-        GlideUtil.setCircleImg(this,url_1, findViewById<ImageView>(R.id.iv_1))
-        GlideUtil.setRoundedCornerImg(this,url_1, findViewById<ImageView>(R.id.iv_2),20)
+        Glide.with(this)
+                .load(url_1)
+                .transform(CircleCrop())
+                .into(findViewById(R.id.iv_1))
+
+        Glide.with(this)
+                .load(url_1)
+                .transform(RoundedCorners(20))
+                .into(findViewById(R.id.iv_2))
+
+        Glide.with(this)
+                .load(url_1)
+                .transform(GlideBlurTransformation(this,15))
+                .into(findViewById(R.id.iv_3))
     }
 }
