@@ -3,7 +3,7 @@
     package="com.zh.userdemo">
 
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +20,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".XTextViewActivity"/>
+        <activity
+            android:name=".XTextViewActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".GlideDemoActivity"
+            android:screenOrientation="fullSensor" />
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ import com.zh.commonuilibrary.util.ColorUtil
  */
 class DrawableBuilder {
     private var mShape = 0
-    private lateinit var mCornerRadius: FloatArray
+    private var mCornerRadius = FloatArray(8)
     private var mLineWidth = 0
     private var mLineColor = 0
     private var mDashWidth = 0f

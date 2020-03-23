@@ -13,6 +13,8 @@
         android:background="@color/colorAccent"
         android:gravity="center"
         android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
         android:paddingRight="20dp"
         android:text="xml文件中设置Textview属性"
         app:bgColor="@color/colorPrimary"

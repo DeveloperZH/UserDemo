@@ -14,7 +14,11 @@ class MainActivity : AppCompatActivity() {
         xtv_text.setOnClickListener { v: View? -> startActivity(Intent(this@MainActivity, XTextViewActivity::class.java)) }
 
         xtv_banner.setOnClickListener {
-            //                startActivity(new Intent(MainActivity.this,XBannerViewActivity.class));
+           startActivity(Intent(this@MainActivity,GlideDemoActivity::class.java))
         }
     }
+
+
 }
+
+
