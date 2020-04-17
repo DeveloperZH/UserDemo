@@ -22,10 +22,14 @@
 
         <activity
             android:name=".XTextViewActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".GlideDemoActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".PageStateActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     abstract fun layoutResId(): Int
     abstract fun initData()
+    open fun initEvent() {}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,5 +24,6 @@ abstract class BaseActivity : AppCompatActivity() {
         val mView = LayoutInflater.from(this).inflate(layoutResId(), null)
         rootView.addView(mView)
         initData()
+        initEvent()
     }
 }

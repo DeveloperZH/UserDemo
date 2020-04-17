@@ -16,6 +16,10 @@ class MainActivity : AppCompatActivity() {
         xtv_banner.setOnClickListener {
            startActivity(Intent(this@MainActivity,GlideDemoActivity::class.java))
         }
+
+        xtv_page_state.setOnClickListener {
+            startActivity(Intent(this@MainActivity,PageStateActivity::class.java))
+        }
     }
 
 

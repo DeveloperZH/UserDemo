@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingBottom="70dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_page_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_network_error" />
+
+    <TextView
+        android:id="@+id/tv_page_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:text="@string/network_error"
+        android:textColor="@color/color_5e5e5e"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/btn_page_error"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_error_btn"
+        android:gravity="center"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:text="@string/retry"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="invisible" />
+
+</LinearLayout>
