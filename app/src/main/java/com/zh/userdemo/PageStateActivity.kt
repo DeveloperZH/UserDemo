@@ -3,7 +3,7 @@ package com.zh.userdemo
 import android.os.Handler
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.tsingning.robot.ui.PageStateHolder
+import com.zh.commonuilibrary.controls.page_state.PageStateHolder
 import com.zh.userdemo.adapter.PageStateAdapter
 import com.zh.userdemo.bean.UserBean
 import kotlinx.android.synthetic.main.activity_page_state.*
