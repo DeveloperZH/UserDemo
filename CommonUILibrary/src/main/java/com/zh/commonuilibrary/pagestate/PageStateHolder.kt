@@ -38,7 +38,6 @@ class PageStateHolder private constructor(context: Context, vararg viewList: Vie
 
     constructor(viewGroup: ViewGroup, vararg viewList: View) : this(viewGroup.context, *viewList) {
         when (viewGroup) {
-//            is LinearLayout -> throw IllegalStateException("LineaLayout is unsupported in LoadPageHolder")
             is LinearLayout -> viewGroup.addView(rootView,0,ViewGroup.LayoutParams(-1,-1))
             is ConstraintLayout -> {
                 viewGroup.addView(rootView, ViewGroup.LayoutParams(0, 0))
